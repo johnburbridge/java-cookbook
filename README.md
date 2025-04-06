@@ -4,47 +4,47 @@ This repository contains a collection of Java projects that exemplify common ope
 
 ## Recipes
 
-*   **Strategy Pattern** (`strategy-pattern`)
+*(Check the boxes below as you complete the implementation for each recipe)*
 
-*(More recipes to be added)*
+### Design Patterns
 
-### Design Patterns (Planned)
-
-*   The Factory Pattern
-*   The Builder Pattern
-*   The Observable Pattern
+- [ ] [The Strategy Pattern](strategy-pattern/README.md)
+- [ ] [The Factory Pattern (Factory Method)](factory-pattern/README.md)
+- [ ] [The Builder Pattern](builder-pattern/README.md)
+- [ ] [The Observable Pattern](observable-pattern/README.md)
+- [ ] [The Singleton Pattern](singleton-pattern/README.md)
 
 ### Beginner Topics
 
-*   Generics in Java
-*   Reading and writing JSON (e.g., using Jackson or Gson)
-*   Reading and writing YAML (e.g., using SnakeYAML)
-*   Handling HTTP Requests (e.g., using `java.net.http.HttpClient`)
-*   Records (Java 14+)
-*   Error Handling and Logging (e.g., using SLF4j + Logback/Log4j2)
-*   Try-with-resources (AutoCloseable)
-*   Annotations
+- [ ] [Generics in Java](generics/README.md)
+- [ ] [Reading and writing JSON](json-handling/README.md)
+- [ ] [Reading and writing YAML](yaml-handling/README.md)
+- [ ] [Handling HTTP Requests](http-requests/README.md)
+- [ ] [Records](records/README.md)
+- [ ] [Error Handling and Logging](error-logging/README.md)
+- [ ] [Try-with-resources](try-with-resources/README.md)
+- [ ] [Annotations](annotations/README.md)
 
 ### Intermediate Topics
 
-*   Reading and writing from/to Postgres (using JDBC or JPA/Hibernate)
-*   Reading and writing from/to MongoDB (using MongoDB Java Driver)
-*   Reading and writing from/to Redis (using Jedis or Lettuce)
-*   Type System and Generics Deep Dive
-*   Functional Programming (Streams API, Lambdas)
-*   Packaging and Distribution (JARs, WARs, Build Tools like Maven/Gradle)
-*   API Development with Spring Boot / Jakarta EE / Quarkus
-*   Concurrent Processing (`java.util.concurrent`, Executors, Fork/Join)
-*   Property-Based Testing (e.g., using jqwik)
-*   Event-Driven Programming (e.g., using Kafka, RabbitMQ, JMS)
+- [ ] [JDBC with Postgres](jdbc-postgres/README.md)
+- [ ] [MongoDB Java Driver](mongodb-driver/README.md)
+- [ ] [Redis Java Clients (Lettuce/Jedis)](redis-clients/README.md)
+- [ ] [Generics Deep Dive](generics-deep-dive/README.md)
+- [ ] [Functional Programming (Streams, Lambdas, Optional)](functional-programming/README.md)
+- [ ] [Packaging and Distribution](packaging-distribution/README.md)
+- [ ] [API Development (REST)](api-development/README.md)
+- [ ] [Concurrent Processing (Executors, Threads)](concurrent-processing/README.md)
+- [ ] [Property-Based Testing (jqwik)](property-based-testing/README.md)
+- [ ] [Event-Driven Programming (Kafka, etc.)](event-driven-programming/README.md)
 
 ### Advanced Topics
 
-*   Asynchronous Programming (CompletableFuture)
-*   Metaprogramming (Reflection, Annotation Processing)
-*   Performance Optimization (JVM Tuning, Profiling)
-*   Memory Management (Garbage Collection)
-*   JNI/JNA (Java Native Interface/Access)
+- [ ] [Asynchronous Programming (CompletableFuture)](async-programming/README.md)
+- [ ] [Metaprogramming (Reflection, Annotation Processing)](metaprogramming/README.md)
+- [ ] [Performance Optimization (Profiling, JMH)](performance-optimization/README.md)
+- [ ] [Memory Management (GC, Heap/Stack)](memory-management/README.md)
+- [ ] [JNI/JNA (Native Interface/Access)](jni-jna/README.md)
 
 ## Project Structure
 
