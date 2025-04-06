@@ -52,4 +52,9 @@ This pattern allows you to swap algorithms used inside an object at runtime. It 
 
 ## Usage
 
-Examples of how to run or use the code in this module. 
+See module for examples:
+- [Animal.java](src/main/java/Animal.java)
+- [BarkStrategy.java](src/main/java/BarkStrategy.java)
+- [MeowStrategy.java](src/main/java/MeowStrategy.java)
+- [SoundStrategy.java](src/main/java/SoundStrategy.java)
+- [TestStrategyPattern.java](src/test/java/TestStrategyPattern.java)
