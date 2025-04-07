@@ -34,6 +34,7 @@ subprojects {
         "testImplementation"(platform("org.junit:junit-bom:5.10.2"))
         "testImplementation"("org.junit.jupiter:junit-jupiter")
         "testRuntimeOnly"("org.junit.platform:junit-platform-launcher")
+        "testImplementation"("org.assertj:assertj-core:3.24.2")
 
         // Optional: Add SLF4j for logging abstraction if desired across modules
         // "implementation"("org.slf4j:slf4j-api:2.0.13")
