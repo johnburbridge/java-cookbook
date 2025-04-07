@@ -1,13 +1,21 @@
 repos:
   - repo: local
     hooks:
+      - id: spotless-apply
+        name: Spotless Apply
+        entry: ./gradlew spotlessApply
+        language: system
+        types: [java]
+        pass_filenames: false
+        stages: [commit]
+
       - id: spotless-check
         name: Spotless Check
         entry: ./gradlew spotlessCheck
         language: system
         types: [java]
         pass_filenames: false
-        stages: [commit] # Run on commit
+        stages: [commit]
 
       - id: checkstyle
         name: Checkstyle
@@ -15,14 +23,4 @@ repos:
         language: system
         types: [java]
         pass_filenames: false
-        stages: [commit] # Run on commit
-
-# To apply formatting automatically on commit, uncomment this hook
-# and comment out the spotless-check hook above.
-# -   id: spotless-apply
-#     name: Spotless Apply
-#     entry: ./gradlew spotlessApply
-#     language: system
-#     types: [java]
-#     pass_filenames: false
-#     stages: [commit]
+        stages: [commit]

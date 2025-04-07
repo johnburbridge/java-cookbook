@@ -59,14 +59,19 @@ subprojects {
             licenseHeaderFile(rootProject.file("config/spotless/copyright.txt")) // Specify license header
         }
     }
-
     // Configure Checkstyle
     configure<CheckstyleExtension> {
-        toolVersion = "10.16.0" // Use a recent Checkstyle version
-        configFile = rootProject.file("config/checkstyle/google_checks.xml")
-        configProperties["checkstyle.cache.file"] = rootProject.layout.buildDirectory.file("checkstyle/checkstyle.cache").get().asFile
+        toolVersion = "10.16.0"
+
+        // Simple approach: use default config file location
+        configDirectory.set(rootProject.file("config/checkstyle"))
+
         isShowViolations = true
-        isIgnoreFailures = false // Fail build on violations
+        isIgnoreFailures = false
+    }
+
+    tasks.withType<Checkstyle>().configureEach {
+        configFile = rootProject.file("config/checkstyle/checkstyle.xml")
     }
 
     // Make checkstyle task run as part of the 'check' lifecycle task

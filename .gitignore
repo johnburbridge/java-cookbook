@@ -52,4 +52,5 @@ out/
 modules.xml
 misc.xml
 workspace.xml
-tasks.xml 
+tasks.xml
+.gradle/

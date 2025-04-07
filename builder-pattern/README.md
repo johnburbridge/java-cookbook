@@ -54,5 +54,5 @@ classDiagram
 *   **Product**: Represents the complex object under construction. `ConcreteBuilder` builds the product's internal representation and defines the process by which it's assembled. Includes classes that define the constituent parts, including interfaces for assembling the parts into the final result.
 *   **Director**: Constructs an object using the `Builder` interface. The `Director` is not responsible for creating the parts, but for orchestrating the construction process using a specific sequence of calls to the `Builder`.
 *   **Client**: Creates a `ConcreteBuilder` object and passes it to the `Director`. Can also retrieve the final `Product` from the `Builder`.
-
+ checkout 
 This pattern is particularly useful when an object needs to be created with many configuration options or parts. It encapsulates the way a complex object is constructed, allowing the construction process to be varied independently. It improves readability and maintainability by isolating complex construction logic. 
