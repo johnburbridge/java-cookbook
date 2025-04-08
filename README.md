@@ -9,7 +9,7 @@ This repository contains a collection of Java projects that exemplify common ope
 ### Design Patterns
 
 - [X] [The Strategy Pattern](strategy-pattern/README.md)
-- [ ] [The Factory Pattern (Factory Method)](factory-pattern/README.md)
+- [X] [The Factory Patterns](factory-patterns/README.md) (there are two!)
 - [X] [The Builder Pattern](builder-pattern/README.md)
 - [ ] [The Observable Pattern](observable-pattern/README.md)
 - [ ] [The Singleton Pattern](singleton-pattern/README.md)
