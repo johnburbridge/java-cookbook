@@ -13,21 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */ 
-import static org.assertj.core.api.Assertions.assertThat;
+package com.github.johnburbridge.javacookbook.builderpattern;
 
-import org.junit.jupiter.api.Test;
-
-public class TestStrategyPattern {
-
-    @Test
-    void testBarkStrategy() {
-        Animal dog = new Animal(new BarkStrategy());
-        assertThat(dog.makeSound()).isEqualTo("woof");
-    }
-
-    @Test
-    void testMeowStrategy() {
-        Animal cat = new Animal(new MeowStrategy());
-        assertThat(cat.makeSound()).isEqualTo("meow");
-    }
+public enum TERRAIN {
+    Land,
+    Water,
+    Air,
+    Space
 }
