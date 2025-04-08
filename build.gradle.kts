@@ -76,6 +76,10 @@ subprojects {
 
     // Make checkstyle task run as part of the 'check' lifecycle task
     tasks.named("check") {
-        dependsOn(tasks.named("checkstyleMain", Checkstyle::class), tasks.named("checkstyleTest", Checkstyle::class))
+        dependsOn(
+            tasks.named("checkstyleMain", Checkstyle::class),
+            tasks.named("checkstyleTest", Checkstyle::class),
+            tasks.named("spotlessApply")
+        )
     }
 } 
