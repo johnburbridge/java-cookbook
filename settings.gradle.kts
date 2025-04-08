@@ -2,7 +2,7 @@ rootProject.name = "java-cookbook"
 
 // Recipe modules will be included here as they are added, e.g.:
 include("strategy-pattern")
-include("factory-pattern")
+include("factory-patterns")
 include("builder-pattern")
 include("observable-pattern")
 include("singleton-pattern")

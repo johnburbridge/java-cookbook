@@ -13,10 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */ 
-public class BarkStrategy implements SoundStrategy {
-
-    @Override
-    public String makeSound() {
-        return "woof";
-    }
+public interface Vehicle {
+    String makeSound();
 }
