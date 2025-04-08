@@ -13,8 +13,7 @@ classDiagram
     class Director {
         - builder: Builder
         + setBuilder(builder: Builder)
-        + constructComplexObject()
-        + constructAnotherObject()
+        + construct()
     }
     class Builder {
         <<Interface>>
@@ -31,9 +30,9 @@ classDiagram
         + getResult() : Product
     }
     class Product {
-        - parts: List<String>
-        + addPart(part: String)
-        + show()
+        - partA: Type
+        - partB: Type
+        - partC: Type
     }
     class Client {
         + operation()
@@ -50,9 +49,20 @@ classDiagram
 ## Explanation
 
 *   **Builder**: Specifies an abstract interface for creating parts of a `Product` object.
-*   **ConcreteBuilder**: Constructs and assembles parts of the product by implementing the `Builder` interface. It defines and keeps track of the representation it creates and provides an interface for retrieving the product (`getResult`).
-*   **Product**: Represents the complex object under construction. `ConcreteBuilder` builds the product's internal representation and defines the process by which it's assembled. Includes classes that define the constituent parts, including interfaces for assembling the parts into the final result.
-*   **Director**: Constructs an object using the `Builder` interface. The `Director` is not responsible for creating the parts, but for orchestrating the construction process using a specific sequence of calls to the `Builder`.
-*   **Client**: Creates a `ConcreteBuilder` object and passes it to the `Director`. Can also retrieve the final `Product` from the `Builder`.
- checkout 
-This pattern is particularly useful when an object needs to be created with many configuration options or parts. It encapsulates the way a complex object is constructed, allowing the construction process to be varied independently. It improves readability and maintainability by isolating complex construction logic. 
+*   **ConcreteBuilder**: Constructs and assembles parts of the product by implementing the `Builder` interface. Defines and keeps track of the representation it creates and provides an interface for retrieving the product.
+*   **Product**: Represents the complex object under construction. Contains many parts and might require extensive configuration.
+*   **Director**: Constructs an object using the `Builder` interface. The `Director` orchestrates the construction process using a specific sequence of builder method calls.
+*   **Client**: Creates a `ConcreteBuilder` object, optionally passes it to the `Director`, and retrieves the final product.
+
+## When to Use
+
+* When the algorithm for creating a complex object should be independent of the parts that make up the object and how they're assembled
+* When the construction process must allow different representations for the object that's constructed
+* When you need to isolate complex construction code from the business logic of the product
+
+## Benefits
+
+* Allows you to construct objects step-by-step, defer construction steps, or run steps recursively
+* Lets you vary a product's internal representation
+* Isolates code for construction and representation
+* Provides greater control over the construction process
