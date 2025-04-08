@@ -1,3 +1,5 @@
+package com.github.johnburbridge.javacookbook.builderpattern;
+
 public class VehicleBuilder {
 
     private int wheels;
