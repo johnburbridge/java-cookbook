@@ -54,7 +54,7 @@ subprojects {
         java {
             importOrder() // Defaults to standard Java order
             removeUnusedImports()
-            googleJavaFormat().aosp().reflowLongStrings() // google-java-format with AOSP style
+            googleJavaFormat("1.18.1").aosp().reflowLongStrings() // google-java-format with AOSP style
             formatAnnotations()
             licenseHeaderFile(rootProject.file("config/spotless/copyright.txt")) // Specify license header
         }
