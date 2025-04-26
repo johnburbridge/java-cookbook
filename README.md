@@ -33,7 +33,7 @@ This repository contains a collection of Java projects that exemplify common ope
 - [ ] [Generics Deep Dive](generics-deep-dive/README.md)
 - [ ] [Functional Programming (Streams, Lambdas, Optional)](functional-programming/README.md)
 - [ ] [Packaging and Distribution](packaging-distribution/README.md)
-- [ ] [API Development (REST)](api-development/README.md)
+- [X] [API Development (REST)](api-development/README.md)
 - [ ] [Concurrent Processing (Executors, Threads)](concurrent-processing/README.md)
 - [ ] [Property-Based Testing (jqwik)](property-based-testing/README.md)
 - [ ] [Event-Driven Programming (Kafka, etc.)](event-driven-programming/README.md)

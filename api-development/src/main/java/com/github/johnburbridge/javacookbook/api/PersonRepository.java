@@ -16,7 +16,9 @@
 package com.github.johnburbridge.javacookbook.api;
 
 import java.util.List;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class PersonRepository {
     public List<Person> findAll() {
         Person john =

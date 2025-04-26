@@ -8,10 +8,14 @@ import org.gradle.api.plugins.quality.CheckstyleExtension
 
 plugins {
     id("com.diffplug.spotless") version "6.25.0" apply false
+    java
+    id("org.springframework.boot") version "3.4.4" apply false
+    id("io.spring.dependency-management") version "1.1.7" apply false
+    kotlin("jvm") version "2.0.0-RC3" apply false
 }
 
 allprojects {
-    group = "com.example.javacookbook" // Replace with your desired group ID
+    group = "com.github.johnburbridge.javacookbook"
     version = "1.0-SNAPSHOT"
 }
 
@@ -20,7 +24,6 @@ subprojects {
     apply(plugin = "com.diffplug.spotless")
     apply(plugin = "checkstyle")
 
-    // Configure the Java plugin extension
     the<JavaPluginExtension>().toolchain {
         languageVersion.set(JavaLanguageVersion.of(21))
     }
@@ -82,4 +85,4 @@ subprojects {
             tasks.named("spotlessApply")
         )
     }
-} 
+}

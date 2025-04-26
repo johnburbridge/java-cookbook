@@ -15,23 +15,12 @@
  */ 
 package com.github.johnburbridge.javacookbook.api;
 
-import java.util.List;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@RestController
-@RequestMapping("/api/persons")
-public class PersonController {
-
-    private final PersonRepository personRepository;
-
-    public PersonController(PersonRepository personRepository) {
-        this.personRepository = personRepository;
-    }
-
-    @GetMapping
-    public List<Person> getAllPersons() {
-        return personRepository.findAll();
+@SpringBootApplication
+public class ApiApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ApiApplication.class, args);
     }
 }

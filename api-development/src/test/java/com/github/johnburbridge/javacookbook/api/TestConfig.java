@@ -15,23 +15,14 @@
  */ 
 package com.github.johnburbridge.javacookbook.api;
 
-import java.util.List;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-@RestController
-@RequestMapping("/api/persons")
-public class PersonController {
-
-    private final PersonRepository personRepository;
-
-    public PersonController(PersonRepository personRepository) {
-        this.personRepository = personRepository;
-    }
-
-    @GetMapping
-    public List<Person> getAllPersons() {
-        return personRepository.findAll();
+@Configuration
+public class TestConfig {
+    // This class provides the configuration for the test
+    @Bean
+    public PersonController personController(PersonRepository personRepository) {
+        return new PersonController(personRepository);
     }
 }
